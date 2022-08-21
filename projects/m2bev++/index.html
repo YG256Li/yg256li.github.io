@@ -460,6 +460,7 @@
     <p class='text-center'>Tech Report</p>
     <p class='text-center'>Official Code Page: <a href="https://github.com/Sense-GVT/M2BEV_V2/">https://github.com/Sense-GVT/M<sup>2</sup>BEV++</a></p>
     <p class='text-center'>Official Paper Release on: <a href='https://arxiv.org/abs/2204.05088' >arxiv link</a></p>
+    <p class='text-center'>The performance of M<sup>2</sup>BEV++ on segmentation and tracking tasks will be updated before October 1st.</p>
     <p class='text-center'><img src='figs/demo.gif' class='img-fluid' style='width:1050px; border-radius:15px; padding:5px'></p>
 
    
@@ -469,14 +470,11 @@
     <div class="container">
 
       <p>
-        In this paper, we propose M^2BEV, a unified framework that jointly performs 3D object detection and map segmentation in the Bird's Eye View~(BEV) space with multi-camera image inputs. Unlike the majority of previous works which separately process detection and segmentation, M^2BEV infers both tasks with a unified model and improves efficiency. M^2BEV efficiently transforms multi-view 2D image features into the 3D BEV feature in ego-car coordinates.
-        Such BEV representation is important as it enables different tasks to share a single encoder. Our framework further contains four important designs that benefit both accuracy and efficiency: 
-        (1) An efficient BEV encoder design that reduces the spatial dimension of a voxel feature map.
-        (2) A dynamic box assignment strategy that uses learning-to-match to assign ground-truth 3D boxes with anchors. 
-        (3) A BEV centerness re-weighting that reinforces with larger weights for more distant predictions, and
-        (4) Large-scale 2D detection pre-training and auxiliary supervision.
-        We show that these designs significantly benefit the ill-posed camera-based 3D perception tasks where depth information is missing. M^2BEV is memory efficient, allowing significantly higher resolution images as input, with faster inference speed.
-        Experiments on nuScenes show that M^2BEV achieves state-of-the-art results in both 3D object detection and BEV segmentation, with the best single model achieving 42.5 mAP and 57.0 mIoU in these two tasks, respectively. 
+        Recently, the multi-camera Bird’s-Eye-View representation has attracted unprecedented attention for its impressive 3D perception capability and is promising for the next-generation feature representation paradigm in autonomous driving. However, most existing methods are still far from actual vehicle deployment due to high latency inference and resource occupation mainly caused by Transformer architecture and implicit/explicit depth estimation.
+        In this technology report, we design a simple, efficient and direct framework, termed M<sup>2</sup>BEV++, following the principle of M<sup>2</sup>BEV [32]. We empirically find the BEV representation can be sufficiently powerful without relying on Transformer and depth representation. As shown in Fig. 1, our improvement designs mainly contain three parts: 
+        (1) We introduce a strong data augmentation strategy for both image and BEV space to avoid overfitting. 
+        (2) We design a multi-frame feature fusion method, where the keyframe fuses three history frames at BEV space.
+        (3) We optimize the view transformation with an accelerator to speed up the inference time. M<sup>2</sup>BEV++ establishes a new state-of-the-art XXX% NDS on the nuScenes validation set with ResNet-101 encoder and runs in real-time on the on-vehicle chips.
       </p>
 
     <hr/>
