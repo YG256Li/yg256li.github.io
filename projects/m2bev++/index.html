@@ -471,7 +471,7 @@
 
       <p>
         Recently, the multi-camera Bird’s-Eye-View representation has attracted unprecedented attention for its impressive 3D perception capability and is promising for the next-generation feature representation paradigm in autonomous driving. However, most existing methods are still far from actual vehicle deployment due to high latency inference and resource occupation mainly caused by Transformer architecture and implicit/explicit depth estimation.
-        In this technology report, we design a simple, efficient and direct framework, termed M<sup>2</sup>BEV++, following the principle of M<sup>2</sup>BEV [32]. We empirically find the BEV representation can be sufficiently powerful without relying on Transformer and depth representation. As shown in Fig. 1, our improvement designs mainly contain three parts: 
+        In this technology report, we design a simple, efficient and direct framework, termed M<sup>2</sup>BEV++, following the principle of M<sup>2</sup>BEV. We empirically find the BEV representation can be sufficiently powerful without relying on Transformer and depth representation. As shown in Fig. 1, our improvement designs mainly contain three parts: 
         (1) We introduce a strong data augmentation strategy for both image and BEV space to avoid overfitting. 
         (2) We design a multi-frame feature fusion method, where the keyframe fuses three history frames at BEV space.
         (3) We optimize the view transformation with an accelerator to speed up the inference time. M<sup>2</sup>BEV++ establishes a new state-of-the-art XXX% NDS on the nuScenes validation set with ResNet-101 encoder and runs in real-time on the on-vehicle chips.
