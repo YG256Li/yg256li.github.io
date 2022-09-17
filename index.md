@@ -3,7 +3,7 @@
 
   <title>Yangguang Li</title>
 
-  <meta name="author" content="Feng (Jeff) Liang">
+  <meta name="author" content="Yangguang Li">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
